@@ -79,7 +79,7 @@ class _MainScreenState extends State<MainScreen> {
             isLoading ?
             Container(
                 height : 400,
-                width : double.infinity,
+                width : MediaQuery.of(context).size.width,
                 child : Center(
                     child : SizedBox(
                         height : 60,
@@ -99,6 +99,13 @@ class _MainScreenState extends State<MainScreen> {
               height: 20,
             ),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5)
+                )
+              ),
                 onPressed: () async{
                   setState(() {
                     isLoading = true;
